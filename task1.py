@@ -1,3 +1,7 @@
+# ========== #
+# Homework 1 #
+# ========== #
+
 #1
 age = 40
 print(age)
@@ -87,11 +91,11 @@ text= 'good morning'
 print(word.upper())
 
 #18
-text= 'PYTHON IS FUN'
-print(text.lower())
+a = 'PYTHON IS FUN'
+print(a.lower())
 
 #19
-text= 'hello world'
+a = 'hello world'
 print(word.capitalize())
 
 #20
@@ -103,9 +107,6 @@ print(fruits2)
 #21
 sentence= 'Hello world from Python'
 print(sentence.split(" "))
-
-
-
 
 
 
