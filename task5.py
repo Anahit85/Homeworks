@@ -245,8 +245,14 @@ second_max = sorted(set(numbers))[-2]
 print(second_max)
 
 #16️⃣Տրված է լիստ՝ հաշվիր, քանի անգամ է կրկնվում ամեն թիվ։
-numbers = [1,2,6,2,8,9,]
-# fel
+numbers = [1, 2, 6, 2, 8, 9,]
+freq = {}   # Hier speichern wir die Häufigkeit der Zahlen.
+for n in numbers:
+    if n in freq:
+        freq[n] += 1
+    else:
+        freq[n] = 1
+print(freq)
 
 #17️⃣Տրված է բառերի լիստ՝ տպիր ամենաերկար բառը։
 words = [ " Python", " java", " CSS"]
@@ -347,7 +353,7 @@ for item in t:
 #35️⃣Տրված է list, որը պարունակում է tuple-ներ՝ տպիր բոլոր երկրորդ էլեմենտները։
 lst = [(1, 2), (3, 4)]
 for i in lst:
-    print(t[1])
+    print(i[1])
 
 #36️⃣Տրված է tuple, որը պարունակում է list-ներ՝ յուրաքանչյուրի մեջ ավելացրու նոր արժեք։
 t = ([1, 2], [4, 3])
@@ -372,9 +378,9 @@ print(lst)
 #39️⃣Ստեղծիր tuple թվերով, հետո փոխիր վերջին արժեքը՝ առանց tuple-ը փոխելու(օգտագործիր list → tuple)։
 t = (7, 3, 5, 1)
 lst = list(t)
-for item in t:
-    lst.insert(-1, item)
-    print(lst)
+lst[-1] = 10
+t = tuple(lst)
+print(t)
 
 #40️⃣Տրված է tuple՝ տպիր բոլոր արժեքները մի տողով (join() օգտագործելով str(tuple) կամ list comprehension)։
 t = ( 'Python', 'is', 'programming')
@@ -382,14 +388,15 @@ result = ' '.join(t)
 print(result)
 
 #41️⃣Օգտագործողից վերցրու անուններ, պահիր լիստում, եւ վերջում տպիր՝ քանի անուն է կրկնվում։
-words = input('Enter words')
+words = input("Enter words")
 lst = words.split()
-print(lst)
 double = 0
+checked = []
 for x in lst:
-    if words.count(x) > 1:
+    if x not in checked and lst.count(x) > 1:
         double += 1
-print('Nuber of double words', double)
+        checked.append(x)
+print("Number of double words", double)
 
 #42️⃣Տրված է list եւ tuple՝ ստեղծիր նոր list, որտեղ կլինեն միայն այն արժեքները, որոնք առկա են երկուսում։
 lst = [1, 2, 3, 4]
@@ -446,10 +453,13 @@ print(a + b)
 
 #48️⃣Տրված է tuple — ստուգիր՝ արդյոք նրա բոլոր արժեքները նույնն են։
 t = (2, 4, 6, 5)
-count = 0
+same = True # wir nehmen an die sind identisch
+first = t[0] # wir vergleichen mit der ersten
 for i in t:
-    if i == 0:
-print(count) # ?
+    if i != first:
+        same = False
+        break
+print("All elements are the same:", same)
 
 
 #49️⃣Տրված է list թվերով՝ հաշվիր միջինից մեծ թվերի քանակը։
