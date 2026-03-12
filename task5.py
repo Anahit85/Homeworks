@@ -343,7 +343,7 @@ for num in t:
         even_numbers.append(num)
     print(even_numbers)
 
-##33️⃣Ստեղծիր ծրագիր, որը ստանում է tuple թվերով եւ վերադարձնում է միայն զույգ թվերով list։
+#34 Ստեղծիր ծրագիր, որը ստանում է tuple թվերով եւ վերադարձնում է միայն զույգ թվերով list։
 t = (1, [2, 3], 4)
 for item in t:
     if isinstance(item, list):
@@ -388,8 +388,10 @@ result = ' '.join(t)
 print(result)
 
 #41️⃣Օգտագործողից վերցրու անուններ, պահիր լիստում, եւ վերջում տպիր՝ քանի անուն է կրկնվում։
-words = input("Enter words")
-lst = words.split()
+lst = []
+for i in range(5):
+    word = input("Enter words")
+    lst.append(word)
 double = 0
 checked = []
 for x in lst:
@@ -437,8 +439,11 @@ for i in lsi:
 print(a)
 
 #46️⃣Օգտագործողից վերցրու բառերի շարք, դարձիր tuple, տպիր ամենաերկար բառը։
-words = input('Enter words')
-t = tuple(words.split())
+lst = []
+for i in range(5):
+    word = input("Enter words")
+    lst.append(word)
+t = tuple(lst)
 longest = t[0]
 for i in t:
     if len(i) > len(longest):

@@ -183,7 +183,7 @@ else:
     print('missing number')
 
 
-"""HomeWork"""
+#HomeWork
 #1. Գումարել լիստի բոլոր էլեմենտները
 number = [3, 7, 2, 9, 4]
 total = 0
@@ -225,7 +225,7 @@ numbers = [1, 2, 3, 4, 5, 6]
 total = 0
 for num in numbers:
     total += num
-    count += 1
+
 average = total / count
 print(average, 'value')
 
